@@ -5,14 +5,18 @@ import "./Header.css";
 const Header = () => {
   const activeStyle = {
     fontWeight: "bold",
+    borderTop: "2px solid gray",
   };
 
   return (
     <>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <NavLink to="/home" className="p-3 text-decoration-none">
-            BEauTy
+          <NavLink
+            to="/home"
+            className="p-3 text-decoration-none text-info fw-bolder fs-4"
+          >
+            BEAUTY
           </NavLink>
           <Nav className="mx-auto">
             <NavLink
