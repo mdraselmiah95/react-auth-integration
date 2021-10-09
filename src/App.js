@@ -6,6 +6,7 @@ import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import AuthProvider from "./context/AuthProvider";
+import Shipping from "./Shipping/Shipping";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
             </Route>
             <Route path="/register">
               <Register></Register>
+            </Route>
+            <Route path="/shipping">
+              <Shipping></Shipping>
             </Route>
           </Switch>
         </Router>
