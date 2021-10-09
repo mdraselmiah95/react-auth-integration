@@ -31,6 +31,9 @@ const Header = () => {
             <Link className="p-3 text-decoration-none text-light" to="/login">
               Login
             </Link>
+            <span className="me-2 text-info fw-bold m-auto">
+              {user.displayName}
+            </span>
             {user?.email && (
               <button
                 onClick={logout}
