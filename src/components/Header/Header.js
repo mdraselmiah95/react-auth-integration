@@ -11,7 +11,7 @@ const Header = () => {
             to="/home"
             className="p-3 text-decoration-none text-info fw-bolder fs-4"
           >
-            BEAUTY
+            REACT
           </Link>
           <Nav className="mx-auto">
             <Link
