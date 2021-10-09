@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
+import PlaceOrder from "./components/PlaceOrder/PlaceOrder";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Register from "./components/Register/Register";
 import AuthProvider from "./context/AuthProvider";
@@ -30,6 +31,9 @@ function App() {
             </Route>
             <PrivateRoute path="/shipping">
               <Shipping></Shipping>
+            </PrivateRoute>
+            <PrivateRoute path="/order">
+              <PlaceOrder></PlaceOrder>
             </PrivateRoute>
           </Switch>
         </Router>

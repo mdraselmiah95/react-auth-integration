@@ -29,6 +29,13 @@ const Header = () => {
             >
               Shipping
             </Link>
+
+            <Link
+              className="p-3 text-decoration-none text-light head"
+              to="/order"
+            >
+              Order
+            </Link>
             <Link
               className="p-3 text-decoration-none text-light"
               to="/register"
