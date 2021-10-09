@@ -1,17 +1,41 @@
 import React from "react";
-import { Container, Nav, Navbar, NavbarBrand } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
 const Header = () => {
+  const activeStyle = {
+    fontWeight: "bold",
+  };
+
   return (
     <>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <NavbarBrand to="/home">BEauTy</NavbarBrand>
+          <NavLink to="/home" className="p-3 text-decoration-none">
+            BEauTy
+          </NavLink>
           <Nav className="mx-auto">
-            <NavLink to="/home">Home</NavLink>
-            <NavLink to="/register">Register</NavLink>
-            <NavLink to="/login">Login</NavLink>
+            <NavLink
+              activeStyle={activeStyle}
+              className="p-3 text-decoration-none text-light"
+              to="/home"
+            >
+              Home
+            </NavLink>
+            <NavLink
+              activeStyle={activeStyle}
+              className="p-3 text-decoration-none text-light"
+              to="/register"
+            >
+              Register
+            </NavLink>
+            <NavLink
+              activeStyle={activeStyle}
+              className="p-3 text-decoration-none text-light"
+              to="/login"
+            >
+              Login
+            </NavLink>
           </Nav>
         </Container>
       </Navbar>
