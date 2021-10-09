@@ -1,5 +1,6 @@
 import {
   getAuth,
+  GithubAuthProvider,
   GoogleAuthProvider,
   onAuthStateChanged,
   signInWithPopup,
@@ -12,9 +13,11 @@ initializationAuthentication();
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [error, setError] = useState("");
-  const auth = getAuth();
 
+  const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
+  const githubProvider = new GithubAuthProvider();
+
   const signInUsingGoogle = () => {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
@@ -25,6 +28,13 @@ const useFirebase = () => {
         setError(error.message);
       });
   };
+
+  const signInUsingGithub = () => {
+    signInWithPopup(auth, githubProvider).then((result) => {
+      setUser(result.user);
+    });
+  };
+
   const logout = () => {
     signOut(auth).then(() => {
       setUser({});
@@ -43,6 +53,7 @@ const useFirebase = () => {
     user,
     error,
     signInUsingGoogle,
+    signInUsingGithub,
   };
 };
 
